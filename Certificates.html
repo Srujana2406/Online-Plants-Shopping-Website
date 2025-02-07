@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Certificate Section -->
+    <section class="py-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-cyan-400 mb-8">Certificates</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition cursor-pointer">
+                    <h3 class="text-lg font-semibold mt-4 text-cyan-400 cursor-pointer" onclick="openModal('block chain (course era).jpg')">Blockchain Certification</h3>
+                    <p class="text-sm text-gray-300">Issued by: Coursera</p>
+                    <p class="text-xs text-gray-400 mt-1">Date: 01/2025</p>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition cursor-pointer">
+                    <h3 class="text-lg font-semibold mt-4 text-cyan-400 cursor-pointer" onclick="openModal('Nptel.jpg')">NPTEL Certification</h3>
+                    <p class="text-sm text-gray-300">Issued by: NTEL</p>
+                    <p class="text-xs text-gray-400 mt-1">Date: 04/2024</p>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition cursor-pointer">
+                    <h3 class="text-lg font-semibold mt-4 text-cyan-400 cursor-pointer" onclick="openModal('Oracle ai.jpg')"> Oracla AI Certification</h3>
+                    <p class="text-sm text-gray-300">Issued by: Oracle</p>
+                    <p class="text-xs text-gray-400 mt-1">Date: 08/2024</p>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition cursor-pointer">
+                    <h3 class="text-lg font-semibold mt-4 text-cyan-400 cursor-pointer" onclick="openModal('Oracle Cloud.jpg')">Oracle Cloud Certification</h3>
+                    <p class="text-sm text-gray-300">Issued by: Oracle</p>
+                    <p class="text-xs text-gray-400 mt-1">Date: 08/2024</p>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition cursor-pointer">
+                    <h3 class="text-lg font-semibold mt-4 text-cyan-400 cursor-pointer" onclick="openModal('course era project.jpg')">Course era project Certification</h3>
+                    <p class="text-sm text-gray-300">Issued by: Courseera</p>
+                    <p class="text-xs text-gray-400 mt-1">Date: 06/2024</p>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition cursor-pointer">
+                    <h3 class="text-lg font-semibold mt-4 text-cyan-400 cursor-pointer" onclick="openModal('greatlearning.jpg')">Great Learning Certification</h3>
+                    <p class="text-sm text-gray-300">Issued by: Great Learning</p>
+                    <p class="text-xs text-gray-400 mt-1">Date: 06/2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal (Hidden by Default) -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center hidden">
+        <div class="relative">
+            <img id="modalImage" src="" alt="Certificate" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-3xl font-bold">&times;</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal Functionality -->
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("imageModal").classList.remove("hidden");
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").classList.add("hidden");
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById("imageModal").addEventListener("click", function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
