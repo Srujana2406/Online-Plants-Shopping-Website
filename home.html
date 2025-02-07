@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Paradise - Online Plant Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f7f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            color: blue;
+            font-family: 'Verdana', sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fafcfa;
+            height: 20%;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #050505;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            width: 50%;
+        }
+
+        .search-bar {
+            padding: 6px 10px;
+            width: 40%;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            font-size: 1.2rem;
+        }
+
+        .search-btn {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .search-btn:hover {
+            background-color: #4CAF50;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('images/Background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            flex: 1 1 30%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .category img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .category h3 {
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Plant Paradise</h1>
+    <p>Your one-stop shop for all things green!</p>
+</header>
+
+<nav>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Search Plants" class="search-bar">
+        <button class="search-btn">Search</button>
+    </div>
+    <div class="nav-icons">
+        <a href="cart.html" title="Cart">
+            <img src="images/carts.png" alt="Cart" style="width: 30px; height: 30px;">
+        </a>
+        <a href="login.html" class="login-btn" style="margin-left: 20px;">Login</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h2>Bring Nature Home</h2>
+    <p>Explore our collection of beautiful indoor and outdoor plants.</p>
+</div>
+
+<div class="container">
+    <h2>Shop by Categories</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="images/Indoor Plants.jpg" alt="Indoor Plants">
+            <a href="Indoor Plants.html"><h3>Indoor Plants</h3></a>
+            <p>Beautify your home with our vibrant indoor plants.</p>
+        </div>
+        <div class="category">
+            <img src="images/Outdoor Plants.jpg" alt="Outdoor Plants">
+            <a href="Outdoor Plants.html"><h3>Outdoor Plants</h3></a>
+            <p>Transform your garden with our outdoor collection.</p>
+        </div>
+        <div class="category">
+            <img src="images/Vegetable Plants.jpg" alt="Vegetable Plants">
+            <a href="Vegetable Plants.html"><h3>Vegetable Plants</h3></a>
+            <p>Grow your own food and stay healthy and fit.</p>
+        </div>
+        <div class="category">
+            <img src="images/Fruit Plants.jpg" alt="Fruit Plants">
+            <a href="Fruit Plants.html"><h3>Fruit Plants</h3></a>
+            <p>Grow your own food and stay healthy and fit.</p>
+        </div>
+        <div class="category">
+            <img src="images/Flowering Plants.jpg" alt="Flowering Plants">
+            <a href="Flowering Plants.html"><h3>Flowering Plants</h3></a>
+            <p>Make your garden evenmore colourful.</p>    
+        </div>
+        <div class="category">
+            <img src="images/Succulents.jpg" alt="Succulents">
+            <a href="Succulents.html"><h3>Succulents</h3></a>
+            <p>Low-maintenance plants perfect for any space.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Plant Paradise. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function showQuantity(button) {
+        button.style.display = 'none';
+        button.nextElementSibling.style.display = 'flex';
+    }
+
+    function changeQuantity(button, delta) {
+        let quantitySpan = button.parentElement.querySelector('.quantity');
+        let currentQuantity = parseInt(quantitySpan.innerText);
+        let newQuantity = currentQuantity + delta;
+        if (newQuantity > 0) {
+            quantitySpan.innerText = newQuantity;
+        }
+    }
+
+    // Function to add item to cart
+    function addToCart(button) {
+        let card = button.parentElement;
+        let productName = card.querySelector('h3').innerText;
+        let productPrice = card.querySelector('p').innerText;
+        let productImage = card.querySelector('img').src;
+        let quantity = parseInt(card.querySelector('.quantity').innerText);
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let existingItem = cart.find(item => item.name === productName);
+
+        if (existingItem) {
+            existingItem.quantity += quantity; // Update quantity if item exists
+        } else {
+            cart.push({ name: productName, price: productPrice, image: productImage, quantity });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${productName} added to cart!`);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                showQuantity(this);
+                addToCart(this);
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

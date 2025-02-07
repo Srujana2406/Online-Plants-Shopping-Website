@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indoor Plants</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style> /* Navigation */
+    nav {
+        color: blue;
+        font-family: 'Verdana', sans-serif;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fafcfa;
+        height: 20%;
+    }
+
+    nav .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav a {
+        color: #050505;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Search Bar */
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        width: 50%;
+    }
+
+    .search-bar {
+        padding: 6px 10px;
+        width: 40%;
+        border-radius: 10px;
+        border: 2px solid #ddd;
+        font-size: 1.2rem;
+    }
+
+    .search-btn {
+        padding: 5px 10px;
+        margin-left: 10px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+
+    .search-btn:hover {
+        background-color: #4CAF50;
+    }
+</style>
+<body>
+    <header style="background-color: green; padding: 10px; color: white;">
+        <h1>Indoor Plants</h1>
+    </header>
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Plants" class="search-bar">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-icons">
+            <a href="cart.html" title="Cart">
+                <img src="images/carts.png" alt="Cart" style="width: 30px; height: 30px;">
+            </a>
+            <a href="login.html" class="login-btn" style="margin-left: 20px;">Login</a>
+        </div>
+    </nav>
+    
+    <section class="plant-container">
+        <div class="plant-card">
+            <img src="images/Aleo Vera.jpeg" alt="Aloe Vera">
+            <h3>Aloe Vera</h3>
+            <p>₹100</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Snake Plant.jpg" alt="Snake Plant">
+            <h3>Snake Plant</h3>
+            <p>₹200</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Peace Lily.jpg" alt="Peace Lily">
+            <h3>Peace Lily</h3>
+            <p>₹110</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Pothos.jpg" alt="Pothos">
+            <h3>Pothos</h3>
+            <p>₹150</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Spider Plant.jpg" alt="Spider Plant">
+            <h3>Spider Plant</h3>
+            <p>₹100</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Areca Palm.jpg" alt="Areca Palm">
+            <h3>Areca Palm</h3>
+            <p>₹300</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Rubber Plant.jpg" alt="Rubber Plant">
+            <h3>Rubber Plant</h3>
+            <p>₹100</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Fiddle Leaf Fig.jpg" alt="Fiddle Leaf Fig">
+            <h3>Fiddle Leaf Fig</h3>
+            <p>₹110</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Boston Fern.jpg" alt="Boston Fern">
+            <h3>Boston Fern</h3>
+            <p>₹100</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Jade Plant.jpg" alt="Jade Plant">
+            <h3>Jade Plant</h3>
+            <p>₹400</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Chinese Evergreen.jpg" alt="Chinese Evergreen">
+            <h3>Chinese Evergreen</h3>
+            <p>₹300</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/Lucky Bamboo.jpg" alt="Lucky Bamboo">
+            <h3>Lucky Bamboo</h3>
+            <p>₹100</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <img src="images/ZZ Plant.jpg" alt="ZZ Palnt">
+            <h3>ZZ Palnt</h3>
+            <p>₹110</p>
+            <button class="add-to-cart" onclick="showQuantity(this)">Add to Cart</button>
+            <div class="quantity-container" style="display: none;">
+                <button class="decrement" onclick="changeQuantity(this, -1)">-</button>
+                <span class="quantity">1</span>
+                <button class="increment" onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            </div>
+            
+    </section>
+    
+    <script>
+        function showQuantity(button) {
+            button.style.display = 'none';
+            button.nextElementSibling.style.display = 'flex';
+        }
+    
+        function changeQuantity(button, delta) {
+            let quantitySpan = button.parentElement.querySelector('.quantity');
+            let currentQuantity = parseInt(quantitySpan.innerText);
+            let newQuantity = currentQuantity + delta;
+            if (newQuantity > 0) {
+                quantitySpan.innerText = newQuantity;
+            }
+        }
+    
+        // Function to add item to cart
+        function addToCart(button) {
+            let card = button.parentElement;
+            let productName = card.querySelector('h3').innerText;
+            let productPrice = card.querySelector('p').innerText;
+            let productImage = card.querySelector('img').src;
+            let quantity = parseInt(card.querySelector('.quantity').innerText);
+    
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let existingItem = cart.find(item => item.name === productName);
+    
+            if (existingItem) {
+                existingItem.quantity += quantity; // Update quantity if item exists
+            } else {
+                cart.push({ name: productName, price: productPrice, image: productImage, quantity });
+            }
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} added to cart!`);
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    showQuantity(this);
+                    addToCart(this);
+                });
+            });
+        });
+    </script>
+    
+
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .plant-container { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 20px; }
+        .plant-card { border: 1px solid green; padding: 15px; cursor: pointer; position: relative; }
+        .plant-card img { width: 150px; height: 150px; border-radius: 10px; }
+        .plant-card .add-to-cart { margin-top: 10px; padding: 8px 12px; background-color: green; color: white; border: none; cursor: pointer; }
+        .quantity-container { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 10px; }
+        .quantity-container button { padding: 5px 10px; background-color: green; color: white; border: none; cursor: pointer; }
+    </style>
+</body>
+</html>
